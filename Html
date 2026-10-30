@@ -111,4 +111,728 @@
             padding: 15px 36px;
             font-size: 0.8rem;
             font-weight: 600;
-            text
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .btn-primary {
+            background-color: var(--sapphire);
+            color: var(--ivory);
+            border-color: var(--sapphire);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--navy-blue);
+            border-color: var(--navy-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 27, 41, 0.15);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--navy-blue);
+            border-color: var(--warm-taupe);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--warm-taupe);
+            color: var(--ivory);
+        }
+
+        /* ==========================================
+           HEADER & NAVIGATION
+           ========================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(250, 248, 245, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(232, 216, 200, 0.6);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--warm-taupe);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--navy-blue);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: var(--warm-taupe);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 22px;
+            color: var(--navy-blue);
+            font-size: 1.1rem;
+        }
+
+        .nav-icons a:hover {
+            color: var(--warm-taupe);
+        }
+
+        /* ==========================================
+           HERO SECTION
+           ========================================== */
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            background: linear-gradient(135deg, rgba(15, 27, 41, 0.88), rgba(27, 59, 111, 0.7)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1920') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: var(--ivory);
+            padding-top: 90px;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-subtitle {
+            color: var(--champagne);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 4.2rem;
+            line-height: 1.08;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: rgba(250, 248, 245, 0.88);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* ==========================================
+           BRAND PROFILE & ABOUT
+           ========================================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-img-box {
+            position: relative;
+        }
+
+        .about-img-box img {
+            border-radius: 2px;
+            box-shadow: 0 20px 40px rgba(15, 27, 41, 0.08);
+        }
+
+        .about-img-box::before {
+            content: '';
+            position: absolute;
+            top: -18px;
+            left: -18px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--champagne);
+            z-index: -1;
+        }
+
+        .about-text h3 {
+            font-size: 2.4rem;
+            color: var(--navy-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 1px solid var(--champagne);
+        }
+
+        .vm-card h4 {
+            font-size: 1.3rem;
+            color: var(--sapphire);
+            margin-bottom: 8px;
+        }
+
+        .vm-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* ==========================================
+           FEATURED PRODUCTS (KALUNG & GELANG)
+           ========================================== */
+        .products-section {
+            background-color: var(--champagne-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            margin-top: 55px;
+        }
+
+        .product-card {
+            background: var(--ivory);
+            border-radius: 2px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(232, 216, 200, 0.7);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 36px rgba(15, 27, 41, 0.08);
+        }
+
+        .product-image {
+            position: relative;
+            height: 330px;
+            overflow: hidden;
+            background-color: #ECE5DC;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.06);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--navy-blue);
+            color: var(--champagne);
+            padding: 5px 14px;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        .product-details {
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.55rem;
+            color: var(--navy-blue);
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .product-specs {
+            font-size: 0.75rem;
+            color: var(--warm-taupe);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+            padding-top: 14px;
+            border-top: 1px dashed var(--champagne);
+            font-weight: 500;
+        }
+
+        /* ==========================================
+           PURCHASE GUIDE
+           ========================================== */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+            margin-top: 55px;
+        }
+
+        .guide-step {
+            background-color: var(--ivory);
+            padding: 40px 28px;
+            border: 1px solid var(--champagne);
+            border-radius: 2px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .guide-step:hover {
+            border-color: var(--warm-taupe);
+            transform: translateY(-4px);
+        }
+
+        .step-number {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            color: var(--champagne);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .guide-step h4 {
+            font-size: 1.3rem;
+            color: var(--navy-blue);
+            margin-bottom: 12px;
+        }
+
+        .guide-step p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           LOCATION & CONTACT SECTION
+           ========================================== */
+        .location-section {
+            background-color: var(--navy-blue);
+            color: var(--ivory);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .location-info h3 {
+            font-size: 2.6rem;
+            color: var(--champagne);
+            margin-bottom: 20px;
+        }
+
+        .address-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(232, 216, 200, 0.25);
+            padding: 28px;
+            border-radius: 2px;
+            margin-bottom: 30px;
+        }
+
+        .address-card p {
+            font-size: 0.92rem;
+            color: rgba(250, 248, 245, 0.88);
+            line-height: 1.8;
+        }
+
+        .address-card i {
+            color: var(--champagne);
+            margin-right: 10px;
+        }
+
+        .store-hours {
+            margin-bottom: 35px;
+            font-size: 0.9rem;
+            color: var(--champagne-light);
+        }
+
+        .map-box {
+            border-radius: 2px;
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(232, 216, 200, 0.2);
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer {
+            background-color: #080E16;
+            color: var(--ivory);
+            padding: 70px 0 30px;
+            border-top: 1px solid rgba(232, 216, 200, 0.12);
+            font-size: 0.88rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 45px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about p {
+            color: rgba(250, 248, 245, 0.6);
+            margin-top: 16px;
+            max-width: 320px;
+            font-size: 0.85rem;
+        }
+
+        .footer-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--champagne);
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(250, 248, 245, 0.7);
+        }
+
+        .footer-links a:hover {
+            color: var(--champagne);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(250, 248, 245, 0.4);
+            font-size: 0.8rem;
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN
+           ========================================== */
+        @media (max-width: 992px) {
+            .about-grid, .location-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-title {
+                font-size: 3.2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .section-title {
+                font-size: 2.3rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Lumiera <span>Jewelry</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Profile Brand</a></li>
+                <li><a href="#products">Koleksi Unggulan</a></li>
+                <li><a href="#guide">Halaman Pembelian</a></li>
+                <li><a href="#location">Butik & Galeri</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#products" title="Cari Perhiasan"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#location" title="Janji Temu"><i class="fa-regular fa-calendar-check"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">High Jewelry & Fine Diamonds</span>
+                <h1 class="hero-title">Embrace Your Radiant Light</h1>
+                <p class="hero-description">Menghadirkan keindahan abadi berlian tersertifikasi internasional dengan presisi desain modern untuk merayakan setiap momen berharga Anda.</p>
+                <a href="#products" class="btn btn-primary">Jelajahi Koleksi Unggulan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND PROFILE, VISI & MISI -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-box">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=800" alt="Lumiera Jewelry Craftsmanship">
+                </div>
+                <div class="about-text">
+                    <span class="section-subtitle">Profile Brand</span>
+                    <h3>Pendar Keindahan Abadi dengan Presisi Tingkat Tinggi</h3>
+                    <p><strong>Lumiera Jewelry</strong> lahir dari pesona pendar cahaya (*lumière*). Kami percaya bahwa setiap perhiasan bukan sekadar aksesori, melainkan simbol kenangan, ungkapan kasih sayang, dan refleksi kepribadian pemiliknya.</p>
+                    <p>Setiap mahakarya dirancang oleh *master jeweller* dengan menggabungkan keanggunan klasik dan estetika modern, menggunakan berlian asli 100% tersertifikasi resmi (GIA / Internal Certificate).</p>
+                    
+                    <div class="vision-mission-grid">
+                        <div class="vm-card">
+                            <h4>Visi Kami</h4>
+                            <p>Menjadi rumah perhiasan berlian ternama yang menginspirasi setiap individu untuk memancarkan keindahan sejati.</p>
+                        </div>
+                        <div class="vm-card">
+                            <h4>Misi Kami</h4>
+                            <p>Menyediakan standar kualitas berlian 4C terbaik, transparansi sertifikasi, serta jaminan layanan purna jual seumur hidup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS (KALUNG & GELANG) -->
+    <section id="products" class="section-padding products-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">Signature Collection</span>
+                <h2 class="section-title">Produk Unggulan Kalung & Gelang</h2>
+                <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto;">Keanggunan tiada tara dalam mahakarya Kalung dan Gelang Berlian khas Lumiera Jewelry.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1: Kalung Solitaire -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Masterpiece</span>
+                        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=600" alt="Lumiera Celestial Solitaire Pendant">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Celestial Solitaire Pendant</h3>
+                        <p class="product-desc">Kalung berlian utama dengan teknik *floating setting* yang memancarkan pendaran cahaya tajam dari segala sudut pemotongan.</p>
+                        <div class="product-specs">Emas 18K White Gold | GIA Certified D-F Color</div>
+                        <a href="https://wa.me/628123456789" target="_blank" class="btn btn-outline" style="text-align: center;">Konsultasi VIP</a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Kalung Tennis -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Classic Luxury</span>
+                        <img src="https://images.unsplash.com/photo-1611591475281-8d2823228e8f?q=80&w=600" alt="Lumiera Allure Tennis Necklace">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Allure Tennis Necklace</h3>
+                        <p class="product-desc">Barisan berlian presisi mengelilingi leher secara simetris sempurna untuk tampilan mewah dan berkelas pada acara istimewa.</p>
+                        <div class="product-specs">Emas 18K Platinum / Rose Gold | VVS Clarity</div>
+                        <a href="https://wa.me/628123456789" target="_blank" class="btn btn-outline" style="text-align: center;">Konsultasi VIP</a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Gelang Bangle -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Bestseller</span>
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600" alt="Lumiera Royale Eternity Bangle">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Royale Eternity Bangle</h3>
+                        <p class="product-desc">Gelang kaku (*bangle*) dengan jajaran berlian *pave setting* yang memberikan kesan tegas, modern, dan anggun.</p>
+                        <div class="product-specs">Emas 18K | Double-Lock Safety Clasp</div>
+                        <a href="https://wa.me/628123456789" target="_blank" class="btn btn-outline" style="text-align: center;">Konsultasi VIP</a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Gelang Tennis -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Timeless</span>
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600" alt="Lumiera Grace Tennis Bracelet">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Grace Tennis Bracelet</h3>
+                        <p class="product-desc">Gelang berlian fleksibel dengan bentuk ergonomis yang memeluk pergelangan tangan secara nyaman sepanjang hari.</p>
+                        <div class="product-specs">Emas 18K White Gold | Ergonomic Smooth Finish</div>
+                        <a href="https://wa.me/628123456789" target="_blank" class="btn btn-outline" style="text-align: center;">Konsultasi VIP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HALAMAN & PANDUAN PEMBELIAN -->
+    <section id="guide" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">Buying Guide</span>
+                <h2 class="section-title">Halaman & Layanan Pembelian</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Langkah mudah dan aman untuk memiliki perhiasan impian Anda di Lumiera Jewelry.</p>
+            </div>
+
+            <div class="guide-grid">
+                <div class="guide-step">
+                    <div class="step-number">01</div>
+                    <h4>Pilih & Konsultasi</h4>
+                    <p>Pilih perhiasan dari katalog online kami atau jalankan konsultasi *bespoke design* secara khusus bersama Jewelry Specialist kami.</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">02</div>
+                    <h4>Penyesuaian Logam</h4>
+                    <p>Tentukan pilihan material emas 18K (White Gold, Yellow Gold, Rose Gold, atau Platinum) serta penyesuaian ukuran perhiasan.</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">03</div>
+                    <h4>Pembayaran Aman</h4>
+                    <p>Terima rincian sertifikasi keaslian dan lakukan pembayaran aman via Transfer Bank Resmi atau Kartu Kredit.</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">04</div>
+                    <h4>Pengiriman Terasuransi</h4>
+                    <p>Perhiasan dikemas dalam *exclusive vault box* khusus dan dikirim dengan asuransi pengiriman penuh 100%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALAMAT & LOKASI BUTIK -->
+    <section id="location" class="section-padding location-section">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <span class="section-subtitle" style="color: var(--champagne);">Flagship Gallery</span>
+                    <h3>Kunjungi Butik Lumiera</h3>
+                    <p style="color: rgba(250, 248, 245, 0.82); margin-bottom: 24px;">Nikmati pengalaman mencoba koleksi perhiasan berlian kami secara langsung dalam suasana butik yang eksklusif dan privat.</p>
+                    
+                    <div class="address-card">
+                        <p><i class="fa-solid fa-location-dot"></i> <strong>Alamat Resmi Gallery:</strong></p>
+                        <p style="margin-top: 8px;">
+                            SERUA VIEW RESIDENCE BLOK.A-2, JL. SUKAKARYA H. REAN,<br>
+                            KELURAHAN BENDA BARU, PAMULANG,<br>
+                            KOTA TANGERANG SELATAN, BANTEN 15414 (A-2), ID, 15415
+                        </p>
+                    </div>
+
+                    <div class="store-hours">
+                        <p><i class="fa-regular fa-clock"></i> <strong>Jam Operasional:</strong> Senin – Minggu | 10.00 – 21.00 WIB</p>
+                    </div>
+
+                    <a href="https://wa.me/628123456789" target="_blank" class="btn btn-primary" style="background-color: var(--champagne); color: var(--navy-blue); border-color: var(--champagne);">Reservasi Kunjungan VIP</a>
+                </div>
+
+                <div class="map-box">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Benda%20Baru%20Pamulang%20Tangerang%20Selatan&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo" style="color: var(--ivory);">Lumiera <span>Jewelry</span></div>
+                    <p>Rumah perhiasan berlian eksklusif dengan keahlian pengerjaan tinggi dan pendar keindahan abadi.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Koleksi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">Kalung Berlian</a></li>
+                        <li><a href="#products">Gelang Berlian</a></li>
+                        <li><a href="#products">Cincin Tunangan</a></li>
+                        <li><a href="#products">Custom Bespoke</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="#guide">Panduan Pembelian</a></li>
+                        <li><a href="#about">Sertifikasi GIA</a></li>
+                        <li><a href="#guide">Perawatan Gratis Seumur Hidup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Kontak Kami</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/628123456789"><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890</a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i> vip@lumierajewelry.com</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> @lumierajewelry</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Lumiera Jewelry. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
